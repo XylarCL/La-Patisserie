@@ -81,8 +81,8 @@ p {
 }
 
 hr {
-    margin-block: 5vw;
-    margin-inline: 10vw;
+    margin-block: 9vw;
+    margin-inline: 25vw;
     padding: 0;
     border: 2px solid black;
     text-align: center;
@@ -132,7 +132,8 @@ h1 {
     width: 100%;    
     padding-block: var(--DefaultPadding);
     padding-inline: calc(var(--DefaultPadding)/2);
-    font-size: var(--FontSizeBody)
+    font-size: var(--FontSizeBody);
+    z-index: 1;
 }
 
 .logo {

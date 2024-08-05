@@ -5,6 +5,7 @@ function renderSummary() {
     if(!cart.length){
         document.querySelector(".js-emptyCart").innerHTML = `<h1 class="empty-cart"> Your cart is empty </h1>`
         document.querySelector(".js-orderSummary").style.display = "none";
+        document.querySelector(".js-productSummary").style.display = "none";
     }
     else {
         renderProducts()
@@ -19,7 +20,7 @@ function renderSummary() {
 function renderProducts() {
     let productHTML = "";
     let currentProduct;
-    let totalCost = 0;
+    console.log(cart);
 
     cart.forEach((cartItem) => {
         currentProduct = getProduct(cartItem.name);
