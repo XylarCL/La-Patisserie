@@ -124,14 +124,15 @@ function checkoutRender() {
     } else {
         fieldsRequired.style.display= "none";
         if(validateEmail(emailInput.value)){
-            let checkoutHTML = `<p>Confirmation has been sent to ${emailInput.value}</p>
+            let checkoutHTML = 
+            `<p>Confirmation has been sent to ${emailInput.value}</p>
             <p>Your order will be available for collection on ${dateInput.value}</p>
             <p> This is an example website. There is no order.</p>`
     
             document.querySelector(".js-orderConfirmation").innerHTML += checkoutHTML;
             document.querySelector(".js-emptyCart").style.display = "none";
             document.querySelector(".js-cartPage").style.display = "none";
-            document.querySelector(".js-orderConfirmation").style.display = "block";
+            document.querySelector(".js-orderConfirmation").style.display = "flex";
         } else {
             validEmail.style.display = "block";
         }

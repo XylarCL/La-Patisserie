@@ -306,8 +306,8 @@ h1 {
     grid-row: 1/3;
 }
 /*#endregion*/
-/*#endregion*/
 /* End Gallery Section Styling */
+/*#endregion*/
 /* End Home Page Styling */
 
 /* Start About Page Styling */
@@ -488,7 +488,9 @@ h1 {
 /*#region*/
 .orderConfirmation {
     text-align: center;
+    align-items: center;
     margin-block: 10vw;
+    flex-direction: column;
     display: none;
 }
 
