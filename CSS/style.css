@@ -130,25 +130,32 @@ h1 {
     background-color: white;
     top: 0;
     width: 100%;    
-    padding: var(--DefaultMargin);
+    padding-block: var(--DefaultPadding);
+    padding-inline: calc(var(--DefaultPadding)/2);
     font-size: var(--FontSizeBody)
 }
 
 .logo {
-    width: 5vw;
-    height: 5vw;
+    width: 10vw;
+    height: 10vw;
     justify-self: center;
     border-radius: 50%;
     border: 1px solid black;
 }
 
-.left, .right {
+.header img {
+    margin-inline: auto;
+}
+
+.headerSection {
     text-align: center;
     flex-basis: 0;
     flex-grow: 1;
+    padding-block: var(--DefaultPadding);
 }
 
 .header a {
+    width: 20%;
     color: black;
     text-decoration: none;
 }
