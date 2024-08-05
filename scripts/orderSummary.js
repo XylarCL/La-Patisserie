@@ -81,8 +81,9 @@ function quantityUpdater() {
                 if(quantityInput.dataset.productName === cartItem.name) {
                     cartItem.quantity = parseInt(quantityInput.value);
                 }
-                if(quantityInput.value === "0") {
-                    removeItem(quantityInput);
+                if(cartItem.quantity === 0) {
+                    cartItem.quantity = 1;
+                    quantityInput.value = 1;
                 }
             })
             saveCart();
@@ -94,7 +95,14 @@ function quantityUpdater() {
 //Remove button
 function removeButtons() {
     document.querySelectorAll(".js-product-summary-remove").forEach((removeButton) => {
-        removeButton.addEventListener("click", removeItem.bind(this, removeButton))
+        removeButton.addEventListener("click", () => {
+            cart.forEach((cartItem, index) => {
+                if(removeButton.dataset.productName === cartItem.name) {
+                    cart.splice(index, 1);
+                }
+            })
+            renderSummary();
+        })
     })
 }
 
