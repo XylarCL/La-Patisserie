@@ -424,6 +424,7 @@ h1 {
 .productSummaryInfo p {
     margin: calc(var(--DefaultMargin)/2);
     padding: 0;
+    white-space: nowrap;
 }
 
 .productSummaryRemove {
