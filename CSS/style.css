@@ -276,7 +276,7 @@ body {
 
 
 /* Start Small Section Styling */
-.smallSection {
+.aboutSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -287,13 +287,12 @@ body {
 }
 
 
-.smallSection p {
+.aboutSection p {
     margin: var(--DefaultMargin);
     max-width: var(--ParagraphWidth);
-    line-height: 1.5;
 }
 
-.smallSection img {
+.aboutImg {
     width: min(75vw, 500px);
 
 }
@@ -541,7 +540,7 @@ hr {
         --GridScaleY: 160px;
         --ParagraphWidth: 80ch;
     }
-    .buttons, .smallSection {
+    .buttons, .aboutSection {
         flex-direction: row;
     }
 
