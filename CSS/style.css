@@ -368,6 +368,7 @@ h1 {
     text-align: left;
     margin: 0;
     padding: calc(var(--DefaultPadding)/8);
+    white-space: nowrap;
 }
 
 .productSquare .btn {
@@ -424,7 +425,6 @@ h1 {
 .productSummaryInfo p {
     margin: calc(var(--DefaultMargin)/2);
     padding: 0;
-    white-space: nowrap;
 }
 
 .productSummaryRemove {
