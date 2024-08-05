@@ -118,8 +118,8 @@ h1 {
 .portfolioPopup h1 {
     margin: 4vw;
 }
-/*End Portfolio Pop-up*/
 /*#endregion*/
+/*End Portfolio Pop-up*/
 
 /* Header Styling */
 /*#region*/
@@ -223,27 +223,27 @@ h1 {
 }
 
 .heroSection.home {
-    background-image: url(../images/heroImgs/homeHero.jpg);
+    background-image: url(../images/heroImgs/mobileHeroImgs/homeHero.JPG);
 }
 
 .heroSection.about {
-    background-image: url(../images/heroImgs/aboutHero.jpg);
+    background-image: url(../images/heroImgs/mobileHeroImgs/aboutHero.JPG);
 }
 
 .heroSection.contact {
-    background-image: url(../images/heroImgs/contactHero.jpg);
+    background-image: url(../images/heroImgs/mobileHeroImgs/contactHero.JPG);
 }
 
 .heroSection.order  {
-    background-image: url(../images/heroImgs/orderHero.jpg);
+    background-image: url(../images/heroImgs/mobileHeroImgs/orderHero.JPG);
 }
 
 .heroSection.cart {
-    background-image: url(../images/heroImgs/cartHero.JPG);
+    background-image: url(../images/heroImgs/mobileHeroImgs/cartHero.JPG);
 }
 
 .heroSection:is(.order, .cart, .contact, .about, .home) { 
-    padding-block: calc(25% - calc(2.7 * var(--FontSizeHeader)));
+    padding-block: calc(16vh - var(--FontSizeHeader));
 }
 /*#endregion*/
 /* End Hero Section Styling */
