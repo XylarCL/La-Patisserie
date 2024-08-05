@@ -48,9 +48,16 @@ document.querySelectorAll(".js-addToCart").forEach((addButton) => {
                 quantity: 1
             })
         }
-
+        playAnimation();
         saveCart();
     })
 })
 
 
+function playAnimation() {
+    let cartHeader = document.querySelector(".js-cartHeader");
+    cartHeader.classList.add('animationTrigger');
+    setTimeout(()=> {
+        cartHeader.classList.remove('animationTrigger')
+    }, 300);
+}

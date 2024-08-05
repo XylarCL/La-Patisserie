@@ -82,15 +82,14 @@ function quantityUpdater() {
                     cartItem.quantity = parseInt(quantityInput.value);
                 }
                 if(quantityInput.value === "0") {
-                    removeItem(quantityInput)
+                    removeItem(quantityInput);
                 }
             })
-            saveCart()
-            renderDelivery()
+            saveCart();
+            renderDelivery();
         })
     } )
 }
-
 
 //Remove button
 function removeButtons() {

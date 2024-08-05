@@ -170,6 +170,11 @@ h1 {
     transition: color 0.25s;
 }
 
+.headerSection.animationTrigger {
+    color: var(--SecondaryColour);
+    transition: color 0.25s;
+}
+
 /*#endregion*/
 /* End Header Styling */
 
@@ -372,7 +377,6 @@ h1 {
 }
 /*#endregion*/
 /* End Contact Section Styling */
-
 
 /* Start Shop Section Styling */
 /*#region*/
