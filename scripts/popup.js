@@ -10,5 +10,5 @@ popupContinue.addEventListener("click", () => {
 
 
 if(decodeURIComponent(document.cookie)) {
-    popup.style.display = "none";
+    popup.style.display = "block";
 }
