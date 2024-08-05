@@ -1,5 +1,5 @@
 import {productsClassed as products} from "../data/products.js";
-import {cart, saveCart} from "../scripts/cart.js";
+import {cart, saveCart} from "./cart.js";
 
 function addHTML(type) {
     const filteredProducts = products.filter((productDetails) => productDetails.type === type);
@@ -8,7 +8,7 @@ function addHTML(type) {
     filteredProducts.forEach((filteredProducts) => {
         layoutHTML += 
         `<div class=productSquare>
-            <img src=${filteredProducts.img}>
+            <img class="outline" src=${filteredProducts.img}>
             <p>${filteredProducts.name}</p>
             <p>£${(filteredProducts.cost/100).toFixed(2)}</p>
             <button data-product-name="${filteredProducts.name}" class="js-addToCart btn">Add to cart</button>
