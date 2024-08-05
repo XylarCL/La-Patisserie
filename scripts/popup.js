@@ -8,7 +8,8 @@ popupContinue.addEventListener("click", () => {
     document.cookie = `seenPopup = true; expires=${tomorrowsDate}`;
 })
 
-
-if(decodeURIComponent(document.cookie)) {
-    popup.style.display = "block";
+console.log("Cookie? " + document.cookie);
+console.log(!decodeURIComponent(document.cookie));
+if(!decodeURIComponent(document.cookie)) {
+    popup.style.display = "flex";
 }
