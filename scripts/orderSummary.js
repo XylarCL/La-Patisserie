@@ -60,12 +60,15 @@ function renderDelivery() {
 
     summaryHTML += `
     <p> Total Cost: £${(totalCost/100).toFixed(2)} </p>
-    <p> Collection date: <input type="date" min="${forniteDate}" class="dateInput js-dateInput"></p> 
-    <p>Please note orders must be placed 2 weeks in advance.</p>
-    <p> Email:<input type="text" class="orderEmail js-orderEmail"></p>
+    <form>
+        <label>Collection date:</label>
+        <input type="date" min="${forniteDate}" class="dateInput js-dateInput"> 
+        <p>Please note orders must be placed 2 weeks in advance.</p>
+        <label>Email:</label>
+        <input type="text" class="orderEmail js-orderEmail">
+        <button type="button" class="btn js-checkoutButton">Checkout</button>
+    </form>`
     
-    <button class="btn js-checkoutButton">Checkout</button>`
-
     document.querySelector(".js-orderSummary").innerHTML = summaryHTML;
 }
 
@@ -92,7 +95,7 @@ function quantityUpdater() {
 function removeButtons() {
     document.querySelectorAll(".js-product-summary-remove").forEach((removeButton) => {
         removeButton.addEventListener("click", removeItem.bind(this, removeButton))
-    } )
+    })
 }
 
 //Remove Item Function
@@ -107,23 +110,36 @@ function removeItem(removeButton) {
 
 //Checkout button
 function checkoutButton() {
-    document.querySelector(".js-checkoutButton").addEventListener("click", () => {
-        document.querySelector(".js-emptyCart").style.display = "none";
-        document.querySelector(".js-cartPage").style.display = "none";
-        document.querySelector(".js-orderConfirmation").style.display = "block";
-        checkoutRender();
-        
-    })
+    document.querySelector(".js-checkoutButton").addEventListener("click", checkoutRender.bind(this))
 }
 
 function checkoutRender() {
     let emailInput = document.querySelector(".js-orderEmail");
     let dateInput = document.querySelector(".js-dateInput");
-    let checkoutHTML = `<p>Confirmation has been sent to ${emailInput.value || "your email"}</p>
-    <p>Your order will be available for collection on ${dateInput.value}</p>
-    <p> This is an example website. There is no order.</p>`
-    document.querySelector(".js-orderConfirmation").innerHTML += checkoutHTML;
+    let fieldsRequired = document.querySelector(".js-fieldsRequired")
+    let validEmail = document.querySelector(".js-validEmail")
+
+    if(!emailInput.value || !dateInput.value) {
+        fieldsRequired.style.display = "block";
+    } else {
+        fieldsRequired.style.display= "none";
+        if(validateEmail(emailInput.value)){
+            let checkoutHTML = `<p>Confirmation has been sent to ${emailInput.value}</p>
+            <p>Your order will be available for collection on ${dateInput.value}</p>
+            <p> This is an example website. There is no order.</p>`
+    
+            document.querySelector(".js-orderConfirmation").innerHTML += checkoutHTML;
+            document.querySelector(".js-emptyCart").style.display = "none";
+            document.querySelector(".js-cartPage").style.display = "none";
+            document.querySelector(".js-orderConfirmation").style.display = "block";
+        } else {
+            validEmail.style.display = "block";
+        }
+    }
 }
 
-
+function validateEmail(email) {
+    let emailRegex = new RegExp("^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$");
+    return emailRegex.test(email);
+}
 renderSummary();

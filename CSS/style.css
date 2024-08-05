@@ -473,6 +473,12 @@ h1 {
     vertical-align: middle;
     font: inherit;
 }
+
+.orderSummary button {
+    display: block;
+    margin-inline: auto;
+}
+
 /*#endregion*/
 /* End Product Summary Styling */
 
@@ -487,6 +493,10 @@ h1 {
 .orderConfirmation p {
     margin: calc(var(--DefaultMargin)/2);
     padding: 0;
+}
+
+.fieldsRequired, .validEmail {
+    display: none;
 }
 /*#endregion*/
 /* End Order Confirmation Styling */
