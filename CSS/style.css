@@ -229,26 +229,6 @@ h1 {
     margin-block: auto;
 }
 
-.heroSection.about {
-    background-image: url(../images/heroImgs/mobileHeroImgs/aboutHero.JPG);
-}
-
-.heroSection.contact {
-    background-image: url(../images/heroImgs/mobileHeroImgs/contactHero.JPG);
-}
-
-.heroSection.order  {
-    background-image: url(../images/heroImgs/mobileHeroImgs/orderHero.JPG);
-}
-
-.heroSection.cart {
-    background-image: url(../images/heroImgs/mobileHeroImgs/cartHero.JPG);
-}
-
-.heroSection:is(.order, .cart, .contact, .about, .home) { 
-
-}
-
 /*#endregion*/
 /* End Hero Section Styling */
 
