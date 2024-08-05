@@ -436,6 +436,7 @@ h1 {
 .productSummaryInfo p {
     margin: calc(var(--DefaultMargin)/2);
     padding: 0;
+    width: 20%;
 }
 
 .productSummaryRemove {
@@ -473,6 +474,7 @@ h1 {
 .orderSummary p {
     padding: 0;
     margin: 0;
+
 }
 
 .dateInput{
