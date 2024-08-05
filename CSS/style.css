@@ -422,9 +422,21 @@ h1 {
 }
 
 .productSummaryInfo p {
-    margin: calc(var(--DefaultMargin)/2);
+    margin: calc(var(--DefaultMargin)/3);
     padding: 0;
-    width: 20%;
+    margin-block: auto;
+}
+
+.productSummaryInfo p:nth-child(1) {
+    width: max(15vw, 90px);
+}
+
+.productSummaryInfo p:nth-child(2) {
+    width: max(15vw, 60px);
+}
+
+.productSummaryInfo p:nth-child(3) {
+    width: max(15vw, 70px);
 }
 
 .productSummaryRemove {
