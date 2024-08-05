@@ -133,7 +133,7 @@ h1 {
     padding-block: var(--DefaultPadding);
     padding-inline: calc(var(--DefaultPadding)/2);
     font-size: var(--FontSizeBody);
-    z-index: 1;
+    z-index: 2;
 }
 
 .logo {
@@ -220,10 +220,13 @@ h1 {
 
 .heroSection h1 {
     font-size: var(--FontSizeLarge);
+    z-index: 1;
+    position: absolute;
 }
 
-.heroSection.home {
-    background-image: url(../images/heroImgs/mobileHeroImgs/homeHero.JPG);
+.heroSection img {
+    width: 100%;
+    margin-block: auto;
 }
 
 .heroSection.about {
@@ -243,8 +246,9 @@ h1 {
 }
 
 .heroSection:is(.order, .cart, .contact, .about, .home) { 
-    padding-block: calc(16vh - var(--FontSizeHeader));
+
 }
+
 /*#endregion*/
 /* End Hero Section Styling */
 
