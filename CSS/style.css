@@ -147,6 +147,10 @@ h1 {
     margin-inline: auto;
 }
 
+.header a:nth-child(3) {
+    width: 15%;
+}
+
 .headerSection {
     text-align: center;
     flex-basis: 0;
