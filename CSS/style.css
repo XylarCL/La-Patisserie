@@ -379,10 +379,9 @@ h1 {
 .eclair, .maccaron, .souffle, .opera, .moose {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(4, 20vw);
+    grid-template-columns: repeat(2, 40vw);
     grid-row-gap: 5vw;
     grid-column-gap: 5vw;
-    font-size: var(--FontSizeSmall);
 }
 /*#endregion*/
 /* End Shop Section Styling */
