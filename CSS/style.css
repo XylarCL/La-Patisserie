@@ -472,7 +472,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-block: calc(3*var(--DefaultMargin));
+    margin-top: calc(3*var(--DefaultMargin));
     margin-inline: auto;
 }
 
@@ -569,8 +569,13 @@ h1 {
 
         --LogoSize: 6vw;
     }
+
     .homePageButtonContainer, .aboutSection {
         flex-direction: row;
+    }
+
+    .aboutSection {
+        margin-inline: 10vw;
     }
 
     .homeSection .btn {
@@ -615,6 +620,10 @@ h1 {
     .homeSection .btn {
         width: 20vw;
         height: 7vw;
+    }
+
+    .aboutSection {
+        margin-inline: 20vw;
     }
 }
 /*#endregion*/
