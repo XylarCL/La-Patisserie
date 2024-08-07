@@ -364,6 +364,10 @@ h1 {
 .contactNameEmailContainer .contactName {
     margin-right: 2vw;
 }
+
+.submittedContact {
+    display: none;
+}
 /*#endregion*/
 /* End Contact Section Styling */
 

@@ -1,6 +1,7 @@
 import { cart, saveCart } from "../scripts/cart.js";
 import { getProduct } from "../data/products.js";
 
+
 function renderSummary() {
     if(!cart.length){
         document.querySelector(".js-emptyCart").innerHTML = `<h1 class="empty-cart"> Your cart is empty </h1>`
@@ -20,7 +21,6 @@ function renderSummary() {
 function renderProducts() {
     let productHTML = "";
     let currentProduct;
-    console.log(cart);
 
     cart.forEach((cartItem) => {
         currentProduct = getProduct(cartItem.name);
@@ -124,6 +124,7 @@ function checkoutButton() {
 function checkoutRender() {
     let emailInput = document.querySelector(".js-orderEmail");
     let dateInput = document.querySelector(".js-dateInput");
+
     let fieldsRequired = document.querySelector(".js-fieldsRequired")
     let validEmail = document.querySelector(".js-validEmail")
 
@@ -151,4 +152,5 @@ function validateEmail(email) {
     let emailRegex = new RegExp("^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$");
     return emailRegex.test(email);
 }
+
 renderSummary();

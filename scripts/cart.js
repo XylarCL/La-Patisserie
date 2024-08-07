@@ -1,5 +1,3 @@
-import { getProduct } from "../data/products.js";
-
 export let cart = loadCart() || [];
 
 export function saveCart() {
