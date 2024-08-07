@@ -1,9 +1,22 @@
 import {productsClassed as products} from "../data/products.js";
 import {cart, saveCart} from "./cart.js";
 
+function generateLayout() {
+    let HTML = "";
+    let product=["eclair", "maccaron", "souffle", "opera", "moose"];
+
+    product.forEach((type) => {
+        HTML += addHTML(type);
+    }) 
+
+    return HTML;
+}
+
 function addHTML(type) {
     const filteredProducts = products.filter((productDetails) => productDetails.type === type);
-    let layoutHTML = "";
+    let layoutHTML = `    
+        <hr>
+        <h1>${type.charAt(0).toUpperCase() + type.slice(1)}</h1>`;
 
     filteredProducts.forEach((filteredProducts) => {
         layoutHTML += 
@@ -18,17 +31,8 @@ function addHTML(type) {
     return layoutHTML;
 }
 
-const orderLayoutEclair = document.querySelector(".eclair");
-const orderLayoutMaccaron = document.querySelector(".maccaron");
-const orderLayoutSouffle = document.querySelector(".souffle");
-const orderLayoutOpera = document.querySelector(".opera");
-const orderLayoutMoose = document.querySelector(".moose");
-
-orderLayoutEclair.innerHTML = addHTML("eclair");
-orderLayoutMaccaron.innerHTML = addHTML("maccaron");
-orderLayoutSouffle.innerHTML = addHTML("souffle");
-orderLayoutOpera.innerHTML = addHTML("opera");
-orderLayoutMoose.innerHTML = addHTML("moose");
+const orderLayout = document.querySelector(".shopPage");
+orderLayout.innerHTML = generateLayout();
 
 document.querySelectorAll(".js-addToCart").forEach((addButton) => {
     addButton.addEventListener("click", addToCart => {
