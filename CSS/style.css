@@ -104,7 +104,7 @@ h1 {
 /* Porfolio Pop-up */
 /*#region*/
 .portfolioPopup {
-    background-color: rgba(78, 78, 78, 0.7);
+    background-color: rgba(78, 78, 78, 1);
     color: white;
     z-index: 3;
     position: fixed;
