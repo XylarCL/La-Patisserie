@@ -19,9 +19,10 @@ function addHTML(type) {
         <h1>${type.charAt(0).toUpperCase() + type.slice(1)}</h1>`;
 
     filteredProducts.forEach((filteredProducts) => {
+        console.log("Product")
         layoutHTML += 
         `<div class=productSquare>
-            <img class="outline" src=${filteredProducts.img}>
+            <img class="outline productImg" src=${filteredProducts.img}>
             <p>${filteredProducts.name}</p>
             <p>£${(filteredProducts.cost/100).toFixed(2)}</p>
             <button data-product-name="${filteredProducts.name}" class="js-addToCart btn">Add to cart</button>
