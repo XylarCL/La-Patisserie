@@ -463,7 +463,7 @@ h1 {
     width: 1vw;
 }
 
-.productSummarRemove:is(:hover, :focus){
+.productSummaryRemove:is(:hover, :focus){
     background-color: transparent;
 }
 
