@@ -387,7 +387,7 @@ h1 {
 }
 
 .productImg {
-    max-width: 300px;
+    max-width: min(300px, 100%);
 }
 
 .shopPage {
