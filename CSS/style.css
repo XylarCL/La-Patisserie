@@ -194,9 +194,9 @@ h1 {
 
 .footer h1 {
     margin-top: var(--DefaultMargin);
+    margin-inline: auto;
     margin-bottom: 0;
     padding-block: 0;
-    break-before: always;
 }
 
 .footer p {
