@@ -463,6 +463,10 @@ h1 {
     width: 1vw;
 }
 
+.productSummarRemove:is(:hover, :focus){
+    background-color: transparent;
+}
+
 .quantityInput {
     text-align: center;
     font: inherit;
